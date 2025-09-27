@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LagosTechBoy | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+<script type="importmap">
+{
+  "imports": {
+    "vite": "https://aistudiocdn.com/vite@^7.1.7",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.3",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="#hero" class="logo" aria-label="Go to top of page">
+            <div class="logo-placeholder">LTB</div>
+        </a>
+        <div class="header-right-items">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme" title="Toggle Theme"></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-terminal">
+                    <h1 class="ltb-title" aria-label="LagosTechBoy">
+                        <!-- Hero Title will be loaded from WordPress -->
+                        <span class="ltb-part" style="--d: 0s;">Lagos</span><span class="ltb-part" style="--d: 0.2s;">Tech</span><span class="ltb-part" style="--d: 0.4s;">Boy</span><span class="cursor" style="--d: 0.6s;">_</span>
+                    </h1>
+                    <p id="typewriter-line2" class="hero-subheading"></p>
+                </div>
+                <a href="#work" class="cta-button">[ View My Work ]</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section fade-in">
+            <h2 class="section-heading">// FILE: about.me</h2>
+            <div class="about-content">
+                <div id="about-photo-wrapper">
+                    <div id="about-photo-placeholder" class="photo-placeholder"></div>
+                    <img id="about-photo" class="photo-placeholder" src="" alt="A photo of LagosTechBoy" style="display: none;">
+                </div>
+                <div class="bio">
+                    <!-- Bio will be loaded from WordPress -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Work/Projects Section -->
+        <section id="work" class="work-section fade-in">
+            <h2 class="section-heading">// DIR: /projects</h2>
+            <div class="project-list">
+                <!-- Projects will be loaded from WordPress -->
+            </div>
+            <div class="pagination-controls fade-in">
+                <button id="prev-btn" class="pagination-btn" aria-label="Previous projects" disabled>&lt; Prev</button>
+                <button id="next-btn" class="pagination-btn" aria-label="Next projects">Next &gt;</button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section fade-in">
+            <h2 class="section-heading">// FUNC: connect()</h2>
+            <p class="contact-text"><span class="code-comment">//</span> Available for collaborations & freelance work.</p>
+            <div class="social-links">
+                <!-- Contact links will be loaded from WordPress -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer fade-in">
+        <p>Process finished with exit code 0.</p>
+        <p>© LagosTechBoy 2025</p>
+    </footer>
+
+    <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top" title="Scroll to top">&uarr;</button>
+
+    <!-- Project Viewer -->
+    <div id="project-viewer-overlay" class="project-viewer-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="project-viewer-window">
+            <header class="project-viewer-header">
+                <p class="project-viewer-filename">// FILE: /projects/<span></span></p>
+                <button id="project-viewer-close" class="project-viewer-close-btn" aria-label="Close project details">[ x ]</button>
+            </header>
+            <div class="project-viewer-content">
+                <div class="project-viewer-image-placeholder"></div>
+                <h1 id="project-viewer-title"></h1>
+                <div class="project-viewer-stack">
+                    <span class="code-comment">--stack</span>
+                    <ul id="project-viewer-stack-list"></ul>
+                </div>
+                <p id="project-viewer-description"></p>
+                <div class="project-viewer-links">
+                    <a id="project-viewer-live-link" href="#" class="cta-button">[ view live site ]</a>
+                    <a id="project-viewer-repo-link" href="#" class="cta-button">[ browse repository ]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
