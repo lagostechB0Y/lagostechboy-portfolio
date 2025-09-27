@@ -14,16 +14,16 @@ The site showcases my work, bio, and contact links in a way that’s fast, respo
 ---
 
 ## 🗂 Project Structure
-/src
-├── index.tsx # Main React entry point
-├── index.css # Global styles
-├── components/ # Reusable UI components
-└── utils/ # API helpers
-index.html # Root HTML file
-metadata.json # Metadata (SEO, config, etc.)
-
-yaml
-Copy code
+index.css             # Global styles
+index.html            # Root HTML file
+index.tsx             # Entry point for the app
+metadata.json         # Metadata (SEO, config, etc.)
+package.json          # Dependencies & scripts
+src/                  # Source folder (components, utils, etc.)
+  index.tsx           # Main React entry file (inside src)
+tsconfig.json         # TypeScript config
+tsconfig.node.json    # TypeScript config for Node
+vite.config.ts        # Vite build config
 
 ---
 
@@ -60,7 +60,7 @@ This project is optimized for hosting on **Vercel** or **Netlify**.
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/lagostechboy-portfolio.git
+git clone https://github.com/lagostechB0Y/lagostechboy-portfolio.git
 cd lagostechboy-portfolio
 
 # 2. Install dependencies
@@ -75,4 +75,6 @@ Push to GitHub → Connect to Vercel → Deploy with one click.
 📜 License
 This project is licensed under the MIT License – free to use and adapt.
 
-💡 Built with care by LagosTechBoy 🖤
+
+## 💡 Built with care by LagosTechBoy 🖤
+
