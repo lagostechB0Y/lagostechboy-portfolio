@@ -8,18 +8,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-<script type="importmap">
-{
-  "imports": {
-    "vite": "https://aistudiocdn.com/vite@^7.1.7",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.3",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+
+    <script type="importmap">
+    {
+      "imports": {
+        "vite": "https://cdn.jsdelivr.net/npm/vite@^7.1.7/dist/vite.min.js",
+        "@vitejs/plugin-react": "https://cdn.jsdelivr.net/npm/@vitejs/plugin-react@^5.0.3/dist/plugin-react.min.js",
+        "react/": "https://cdn.jsdelivr.net/npm/react@^19.1.1/",
+        "react": "https://cdn.jsdelivr.net/npm/react@^19.1.1",
+        "react-dom/": "https://cdn.jsdelivr.net/npm/react-dom@^19.1.1/"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
 
@@ -45,8 +47,10 @@
             <div class="hero-content">
                 <div class="hero-terminal">
                     <h1 class="ltb-title" aria-label="LagosTechBoy">
-                        <!-- Hero Title will be loaded from WordPress -->
-                        <span class="ltb-part" style="--d: 0s;">Lagos</span><span class="ltb-part" style="--d: 0.2s;">Tech</span><span class="ltb-part" style="--d: 0.4s;">Boy</span><span class="cursor" style="--d: 0.6s;">_</span>
+                        <span class="ltb-part" style="--d: 0s;">Lagos</span>
+                        <span class="ltb-part" style="--d: 0.2s;">Tech</span>
+                        <span class="ltb-part" style="--d: 0.4s;">Boy</span>
+                        <span class="cursor" style="--d: 0.6s;">_</span>
                     </h1>
                     <p id="typewriter-line2" class="hero-subheading"></p>
                 </div>
@@ -121,6 +125,6 @@
     </div>
 
     <script type="module" src="/src/index.tsx"></script>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
