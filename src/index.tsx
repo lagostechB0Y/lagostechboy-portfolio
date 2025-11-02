@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchProjects = async (page = 1) => {
         // NOTE: Changed to '/wp/v2/posts' to work with the demo API. 
         // Change back to '/wp/v2/projects' when using your own backend.
-        const response = await apiFetch(`/wp/v2/posts?per_page=${projectsPerPage}&page=${page}&_embed`);
+        const response = await apiFetch(`/wp/v2/project?per_page=${projectsPerPage}&page=${page}&_embed`);
         const totalPagesHeader = response.headers.get('X-WP-TotalPages');
         const projects: WP_Project[] = await response.json();
         return { projects, totalPages: totalPagesHeader ? parseInt(totalPagesHeader, 10) : 1 };
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchAboutPage = async (): Promise<WP_Page> => {
         // NOTE: Changed to slug 'sample-page' which exists on the demo API.
         // Change back to 'about' when using your own backend.
-        const response = await apiFetch('/wp/v2/pages?slug=sample-page&_embed');
+        const response = await apiFetch('/wp/v2/pages?slug=about&_embed');
         const pages: WP_Page[] = await response.json();
         if (pages.length === 0) throw new Error("About page not found.");
         return pages[0];
