@@ -6,7 +6,8 @@
 // --- CONFIGURATION ---
 // This is a live demo API. It doesn't have the custom fields, so the app will use fallbacks.
 // IMPORTANT: Replace this URL with your actual WordPress REST API endpoint once it's set up.
-const WP_API_URL = 'https://demo.wp-api.org/wp-json';
+const WP_API_URL = import.meta.env.VITE_WP_API_URL;
+
 
 // It's recommended to set up a custom post type 'projects' and an 'about' page.
 // Use a plugin like Advanced Custom Fields (ACF) to create fields and expose them to the REST API.
