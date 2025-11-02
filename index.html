@@ -6,22 +6,9 @@
     <title>LagosTechBoy | Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-
-    <script type="importmap">
-    {
-      "imports": {
-        "vite": "https://cdn.jsdelivr.net/npm/vite@^7.1.7/dist/vite.min.js",
-        "@vitejs/plugin-react": "https://cdn.jsdelivr.net/npm/@vitejs/plugin-react@^5.0.3/dist/plugin-react.min.js",
-        "react/": "https://cdn.jsdelivr.net/npm/react@^19.1.1/",
-        "react": "https://cdn.jsdelivr.net/npm/react@^19.1.1",
-        "react-dom/": "https://cdn.jsdelivr.net/npm/react-dom@^19.1.1/"
-      }
-    }
-    </script>
-
-    <link rel="stylesheet" href="/index.css">
+    
 </head>
 <body>
 
@@ -32,12 +19,19 @@
         <div class="header-right-items">
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#work">work</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme" title="Toggle Theme"></button>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme" title="Toggle Theme">
+                <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.59a.75.75 0 11-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.803 17.803a.75.75 0 01-1.06 0l-1.59-1.591a.75.75 0 111.06-1.06l1.59 1.59a.75.75 0 010 1.06zM12 21.75a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0V21a.75.75 0 01-.75-.75zM6.106 18.894a.75.75 0 010-1.06l1.59-1.59a.75.75 0 111.06 1.06l-1.59 1.59a.75.75 0 01-1.06 0zM3.25 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H4a.75.75 0 01-.75-.75zM6.106 6.106a.75.75 0 011.06 0l1.591 1.59a.75.75 0 11-1.06 1.06L6.106 7.167a.75.75 0 010-1.06z"></path>
+                </svg>
+                <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.949a.75.75 0 01.819.162l.805.805a.75.75 0 010 1.06l-.805.805a.75.75 0 01-1.06 0 11.25 11.25 0 01-9.92-9.92.75.75 0 010-1.06l.805-.805a.75.75 0 011.06 0l.805.805z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -45,36 +39,51 @@
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="hero-content">
-                <div class="hero-terminal">
-                    <h1 class="ltb-title" aria-label="LagosTechBoy">
-                        <span class="ltb-part" style="--d: 0s;">Lagos</span>
-                        <span class="ltb-part" style="--d: 0.2s;">Tech</span>
-                        <span class="ltb-part" style="--d: 0.4s;">Boy</span>
-                        <span class="cursor" style="--d: 0.6s;">_</span>
-                    </h1>
-                    <p id="typewriter-line2" class="hero-subheading"></p>
-                </div>
-                <a href="#work" class="cta-button">[ View My Work ]</a>
+                <h1 class="ltb-title" aria-label="LagosTechBoy">
+                    <!-- Hero Title will be loaded from WordPress -->
+                    <span class="ltb-part" style="--d: 0s;">Lagos</span><span class="ltb-part" style="--d: 0.2s;">Tech</span><span class="ltb-part" style="--d: 0.4s;">Boy</span>
+                </h1>
+                <p id="typewriter-line2" class="hero-subheading"></p>
+                <a href="#work" class="cta-button">View My Work</a>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about" class="about-section fade-in">
-            <h2 class="section-heading">// FILE: about.me</h2>
+            <h2 class="section-heading">About Me</h2>
             <div class="about-content">
                 <div id="about-photo-wrapper">
                     <div id="about-photo-placeholder" class="photo-placeholder"></div>
                     <img id="about-photo" class="photo-placeholder" src="" alt="A photo of LagosTechBoy" style="display: none;">
                 </div>
                 <div class="bio">
-                    <!-- Bio will be loaded from WordPress -->
+                    <h3 class="about-tagline">// My story so far</h3>
+                    <div id="bio-content-wrapper">
+                        <!-- Bio content will be loaded here from WordPress -->
+                        <p>Loading bio...</p>
+                    </div>
+                    <div class="tech-stack">
+                        <h4>My Go-To Stack</h4>
+                        <ul>
+                            <li>PHP</li>
+                            <li>Laravel</li>
+                            <li>WordPress</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>React</li>
+                            <li>Vue.js</li>
+                            <li>MySQL</li>
+                            <li>Docker</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="cta-button secondary small about-cta">Let's Connect</a>
                 </div>
             </div>
         </section>
 
         <!-- Work/Projects Section -->
         <section id="work" class="work-section fade-in">
-            <h2 class="section-heading">// DIR: /projects</h2>
+            <h2 class="section-heading">Selected Work</h2>
             <div class="project-list">
                 <!-- Projects will be loaded from WordPress -->
             </div>
@@ -86,39 +95,47 @@
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section fade-in">
-            <h2 class="section-heading">// FUNC: connect()</h2>
-            <p class="contact-text"><span class="code-comment">//</span> Available for collaborations & freelance work.</p>
-            <div class="social-links">
-                <!-- Contact links will be loaded from WordPress -->
+            <div class="contact-card">
+                <h2 class="section-heading">Get In Touch</h2>
+                <p class="contact-text">I'm currently available for freelance opportunities. Have a project in mind? Let's talk.</p>
+                <div class="social-links">
+                    <!-- Contact links will be rendered by the script -->
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer fade-in">
-        <p>Process finished with exit code 0.</p>
-        <p>© LagosTechBoy 2025</p>
+        <p>&copy; LagosTechBoy 2025</p>
     </footer>
 
-    <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top" title="Scroll to top">&uarr;</button>
+    <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+          <path d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3638 14.364L16.9495 15.7782L11.9997 10.8284Z"></path>
+        </svg>
+    </button>
 
     <!-- Project Viewer -->
     <div id="project-viewer-overlay" class="project-viewer-overlay" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="project-viewer-window">
             <header class="project-viewer-header">
-                <p class="project-viewer-filename">// FILE: /projects/<span></span></p>
-                <button id="project-viewer-close" class="project-viewer-close-btn" aria-label="Close project details">[ x ]</button>
+                 <h3 class="project-viewer-filename"></h3>
+                <button id="project-viewer-close" class="project-viewer-close-btn" aria-label="Close project details">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                      <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4148L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path>
+                    </svg>
+                </button>
             </header>
             <div class="project-viewer-content">
                 <div class="project-viewer-image-placeholder"></div>
                 <h1 id="project-viewer-title"></h1>
                 <div class="project-viewer-stack">
-                    <span class="code-comment">--stack</span>
                     <ul id="project-viewer-stack-list"></ul>
                 </div>
-                <p id="project-viewer-description"></p>
+                <div id="project-viewer-description"></div>
                 <div class="project-viewer-links">
-                    <a id="project-viewer-live-link" href="#" class="cta-button">[ view live site ]</a>
-                    <a id="project-viewer-repo-link" href="#" class="cta-button">[ browse repository ]</a>
+                    <a id="project-viewer-live-link" href="#" class="cta-button small">Visit Live Site</a>
+                    <a id="project-viewer-repo-link" href="#" class="cta-button small secondary">View Repository</a>
                 </div>
             </div>
         </div>
