@@ -65,7 +65,6 @@ interface SiteOptions {
     };
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
 
     const allProjects = new Map<number, WP_Project>();
