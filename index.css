@@ -477,10 +477,47 @@ html[data-theme='light'] .theme-icon-sun { display: none; }
 
 /* --- Footer & Scroll-to-Top --- */
 .site-footer {
-    padding: 4rem 2rem 2rem; text-align: center;
-    color: var(--secondary-text-color); font-size: 0.9rem;
+    padding: 2rem 0;
     border-top: 1px solid var(--border-color);
 }
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+.copyright-text, .made-in-lagos {
+    margin: 0;
+}
+
+.made-in-lagos {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.made-in-lagos:hover {
+    color: var(--text-color);
+}
+
+.made-in-lagos svg {
+    width: 1.1em;
+    height: 1.1em;
+    color: var(--accent-color);
+    position: relative;
+    top: 0.05em;
+}
+
+
 .scroll-to-top-btn {
     position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
     width: 52px; height: 52px;
@@ -610,4 +647,9 @@ html[data-theme='light'] .project-viewer-overlay { background-color: rgba(253, 2
     .project-viewer-window { border-radius: 16px; max-height: 85vh; }
     .project-viewer-content { padding: 1.5rem; }
     .project-viewer-content h1 { font-size: 2rem; }
+    .footer-content {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
 }
