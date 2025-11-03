@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderSiteOptions = (options: SiteOptions | null) => {
         const logoText = options?.logo_text || 'LTB';
         const heroTitle = options?.hero_title || 'Lagos|Tech|Boy';
-        const heroSubtitle = options?.hero_subtitle || '> Software Engineer | WordPress & Laravel Specialist';
+        const heroSubtitle = options?.hero_subtitle || '> PHP & Laravel Developer | WordPress Expert';
 
         const logoEl = document.querySelector('.logo-placeholder');
         if (logoEl) logoEl.textContent = logoText;
