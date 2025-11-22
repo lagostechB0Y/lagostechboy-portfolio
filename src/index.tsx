@@ -17,7 +17,6 @@ declare global {
 const WP_API_URL = import.meta.env.VITE_WP_API_URL;
 if (!WP_API_URL) {
   console.error("VITE_WP_API_URL is not defined in your environment file. Please add it to your .env file.");
-  // You might want to display a user-friendly error on the page as well
   document.body.innerHTML = '<div style="color: red; text-align: center; padding-top: 50px; font-family: sans-serif;"><h1>Configuration Error</h1><p>The WordPress API URL is not configured. Please contact the site administrator.</p></div>';
 }
 
@@ -108,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return pages[0];
     };
     
-    const fetchSiteOptions = async (): Promise<SiteOptions | null> => {
+    /* const fetchSiteOptions = async (): Promise<SiteOptions | null> => {
         try {
             const response = await apiFetch('/v1/site-options');
             return await response.json();
@@ -118,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- UI Rendering Functions ---
+    */// --- UI Rendering Functions ---
     const renderErrorMessage = (container: Element | null, message: string) => {
         if (container) {
             container.innerHTML = `<p class="error-message" style="text-align: center; color: var(--secondary-text-color); grid-column: 1 / -1;">${message}</p>`;
@@ -259,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error("Failed to initialize page content:", error);
             renderSiteOptions(null); // Render fallbacks for site options
-            renderErrorMessage(aboutBioContainer, "// Could not load page content from the API.");
+            renderErrorMessage(aboutBioContainer, "// page content is being loaded.");
         }
         
         await loadAndRenderProjects(currentPage);
