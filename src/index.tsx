@@ -2,10 +2,12 @@
 // The original `/// <reference types="vite/client" />` is removed because it was causing an error,
 // likely due to a missing or misconfigured tsconfig.json. This manual declaration provides the necessary types for Vite's environment variables.
 declare global {
+  interface ImportMetaEnv {
+    readonly VITE_WP_API_URL: string;
+  }
+
   interface ImportMeta {
-    readonly env: {
-      readonly VITE_WP_API_URL: string;
-    };
+    readonly env: ImportMetaEnv;
   }
 }
 
