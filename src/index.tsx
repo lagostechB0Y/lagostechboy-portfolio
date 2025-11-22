@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return pages[0];
     };
     
-    /* const fetchSiteOptions = async (): Promise<SiteOptions | null> => {
+     const fetchSiteOptions = async (): Promise<SiteOptions | null> => {
         try {
             const response = await apiFetch('/v1/site-options');
             return await response.json();
@@ -118,27 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return null;
         }
     };
-
-    */
-    async function fetchSiteOptions(): Promise<SiteOptions | null> {
-        try {
-            // Try the previously used v1 custom endpoint (fallback to null if it doesn't exist).
-            const response = await apiFetch('/v1/site-options');
-            // apiFetch may return undefined when WP_API_URL is not set; handle that case.
-            if (!response) {
-                return null;
-            }
-            if (!response.ok) {
-                // Endpoint not present or returns non-2xx — silently fall back to defaults.
-                return null;
-            }
-            const data = await response.json();
-            return data as SiteOptions;
-        } catch (error) {
-            // Swallow errors for site options and use local fallbacks instead of spamming the console.
-            return null;
-        }
-    }
    
     // --- UI Rendering Functions ---
     const renderErrorMessage = (container: Element | null, message: string) => {
