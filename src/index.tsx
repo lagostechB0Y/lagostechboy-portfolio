@@ -120,23 +120,23 @@ document.addEventListener('DOMContentLoaded', () => {
     */
     async function fetchSiteOptions(): Promise<SiteOptions | null> {
         try {
-            const response = await apiFetch('/v2/site-options');
+            // Try the previously used v1 custom endpoint (fallback to null if it doesn't exist).
+            const response = await apiFetch('/v1/site-options');
             // apiFetch may return undefined when WP_API_URL is not set; handle that case.
             if (!response) {
-                console.warn('WP_API_URL is not configured; skipping site options fetch.');
                 return null;
             }
             if (!response.ok) {
-                console.warn(`Failed to fetch site options: ${response.status} ${response.statusText}`);
+                // Endpoint not present or returns non-2xx — silently fall back to defaults.
                 return null;
             }
             const data = await response.json();
             return data as SiteOptions;
         } catch (error) {
-            console.warn("Could not fetch site options from custom endpoint. Using fallbacks.", error);
+            // Swallow errors for site options and use local fallbacks instead of spamming the console.
             return null;
         }
-    };
+    }
    
     // --- UI Rendering Functions ---
     const renderErrorMessage = (container: Element | null, message: string) => {
