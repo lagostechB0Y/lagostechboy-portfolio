@@ -117,7 +117,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    */// --- UI Rendering Functions ---
+    */
+    async function fetchSiteOptions(): Promise<SiteOptions | null> {
+        try {
+            const response = await apiFetch('/v1/site-options');
+            if (!response.ok) {
+                console.warn(`Failed to fetch site options: ${response.status} ${response.statusText}`);
+                return null;
+            }
+            const data = await response.json();
+            return data as SiteOptions;
+        } catch (error) {
+            console.warn("Could not fetch site options from custom endpoint. Using fallbacks.", error);
+            return null;
+        }
+    };
+   
+    // --- UI Rendering Functions ---
     const renderErrorMessage = (container: Element | null, message: string) => {
         if (container) {
             container.innerHTML = `<p class="error-message" style="text-align: center; color: var(--secondary-text-color); grid-column: 1 / -1;">${message}</p>`;
