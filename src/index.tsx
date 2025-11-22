@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     */
     async function fetchSiteOptions(): Promise<SiteOptions | null> {
         try {
-            const response = await apiFetch('/v1/site-options');
+            const response = await apiFetch('/v2/site-options');
             // apiFetch may return undefined when WP_API_URL is not set; handle that case.
             if (!response) {
                 console.warn('WP_API_URL is not configured; skipping site options fetch.');
